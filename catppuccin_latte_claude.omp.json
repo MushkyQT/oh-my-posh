@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "mauve":    "#8839ef",
+    "lavender": "#7287fd",
+    "teal":     "#179299",
+    "peach":    "#fe640b",
+    "red":      "#d20f39",
+    "subtext1": "#5c5f77"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:mauve",
+          "style": "plain",
+          "template": "󰿉 {{ .Model.DisplayName }} ",
+          "type": "claude"
+        },
+        {
+          "foreground": "p:lavender",
+          "foreground_templates": [
+            "{{ if ge (atoi .TokenUsagePercent.String) 95 }}p:red{{ end }}",
+            "{{ if ge (atoi .TokenUsagePercent.String) 80 }}p:peach{{ end }}"
+          ],
+          "style": "plain",
+          "template": "{{ .TokenUsagePercent.Gauge }} {{ .TokenUsagePercent.String }}% ",
+          "type": "claude"
+        },
+        {
+          "foreground": "p:teal",
+          "style": "plain",
+          "template": " {{ .FormattedCost }} ",
+          "type": "claude"
+        },
+        {
+          "foreground": "p:subtext1",
+          "style": "plain",
+          "template": " {{ .FormattedDuration }}",
+          "type": "claude"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": false,
+  "version": 4
+}
