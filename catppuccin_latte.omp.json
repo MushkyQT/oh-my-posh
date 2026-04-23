@@ -5,7 +5,8 @@
         "closer": "p:os",
         "pink": "#ea76cb",
         "lavender": "#7287FD",
-        "blue":  "#1e66f5"
+        "blue":  "#1e66f5",
+        "red":  "#d20f39"
   },
   "blocks": [
     {
@@ -63,6 +64,14 @@
     }
   ],
   "final_space": true,
+  "transient_prompt": {
+    "foreground": "p:closer",
+    "foreground_templates": [
+      "{{ if gt .Code 0 }}p:red{{ end }}"
+    ],
+    "background": "transparent",
+    "template": " "
+  },
   "version": 4
 }
 
