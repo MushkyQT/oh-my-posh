@@ -9,13 +9,13 @@ Both files are standalone and can be used independently.
 
 ## Preview
 
-Shell prompt:
+Shell prompt across common situations:
 
-```
- user@host ~/some/path  main
-```
+![Shell prompt examples](docs/shell-prompt.png)
 
 Claude Code status line (colors shift as the context window fills):
+
+![Claude Code status line](docs/claude-status.png)
 
 ```
 󰿉 Opus 4.7   ▰▰▰▰▱ 9%    $0.42    2m 5s        (lavender  — normal)
